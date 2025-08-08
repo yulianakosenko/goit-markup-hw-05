@@ -654,3 +654,122 @@ svg {
   --hover-color: #31d0aa;
 }
 
+/* D1: Оформлення елементів форми підписки у футері */
+.footer-subscribe-form {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.footer-subscribe-input {
+  flex-grow: 1;
+  padding: 12px 16px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1), box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.footer-subscribe-button {
+  padding: 12px 24px;
+  background-color: var(--primary-color);
+  border: none;
+  border-radius: 4px;
+  color: #fff;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.footer-subscribe-button:hover,
+.footer-subscribe-button:focus {
+  background-color: var(--hover-color);
+}
+* D2: Оформлення елементів форми заявки у модальному вікні */
+.modal-form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 24px;
+  background-color: #fff;
+  border-radius: 8px;
+  max-width: 400px;
+}
+
+.modal-form input[type="text"],
+.modal-form input[type="email"],
+.modal-form textarea {
+  padding: 12px 16px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1), box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* D3: Зміна рамки іконки при фокусі на input */
+.modal-form input[type="text"]:focus,
+.modal-form input[type="email"]:focus,
+.modal-form textarea:focus {
+  border-color: var(--primary-color);
+  box-shadow: 0 0 4px var(--primary-color);
+  outline: none;
+}
+
+.modal-form input[type="text"]:focus + .input-icon,
+.modal-form input[type="email"]:focus + .input-icon,
+.modal-form textarea:focus + .input-icon {
+  fill: var(--primary-color);
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* D4: Приховування оригінального чекбокса */
+.modal-form input[type="checkbox"] {
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+  pointer-events: none;
+}
+
+/* D5: Оформлення кастомного чекбокса з SVG галочкою */
+.checkbox-custom {
+  display: inline-flex;
+  align-items: center;
+  cursor: pointer;
+  user-select: none;
+  position: relative;
+  padding-left: 32px;
+  font-size: 16px;
+  color: #434455;
+}
+
+.checkbox-custom svg {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 20px;
+  height: 20px;
+  border: 1.5px solid #ccc;
+  border-radius: 4px;
+  fill: transparent;
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1), fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Показати галочку при checked */
+.modal-form input[type="checkbox"]:checked + .checkbox-custom svg {
+  border-color: var(--primary-color);
+  fill: var(--primary-color);
+}
+
+/* D6: Усі переходи для hover/focus ефектів */
+.modal-form input[type="text"],
+.modal-form input[type="email"],
+.modal-form textarea,
+.checkbox-custom svg,
+.footer-subscribe-button,
+.footer-subscribe-input {
+  transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}

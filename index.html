@@ -421,6 +421,39 @@
         </ul>
       </div>
     </section>
+    <!-- Модальне вікно з бекдропом -->
+    <div class="backdrop" id="modalBackdrop" hidden>
+      <div class="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle" aria-describedby="modalDesc">
+        <button type="button" class="modal-close-btn" aria-label="Close modal">&times;</button>
+    
+        <h2 id="modalTitle">Request a Service</h2>
+        <p id="modalDesc">Please fill in the form below to request our services.</p>
+    
+        <form class="modal-form" action="#" method="post" novalidate>
+          <label for="userName">Your Name</label>
+          <input type="text" id="userName" name="userName" placeholder="Enter your name" required />
+    
+          <label for="userEmail">Email Address</label>
+          <input type="email" id="userEmail" name="userEmail" placeholder="Enter your email" required />
+    
+          <label for="userPhone">Phone Number</label>
+          <input type="tel" id="userPhone" name="userPhone" placeholder="Enter your phone number" required />
+    
+          <div class="checkbox-wrapper">
+            <input type="checkbox" id="licenseAgreement" name="licenseAgreement" required />
+            <label for="licenseAgreement">
+              I agree to the <a href="#">license agreement</a>
+              <svg class="icon-check" width="16" height="16">
+                <use href="./images/icons.svg#icon-check"></use>
+              </svg>
+            </label>
+          </div>
+    
+          <button type="submit" class="modal-submit-btn">Send Request</button>
+        </form>
+      </div>
+    </div>
+
   </main>  
 
 
@@ -471,6 +504,13 @@
           </li>
         </ul>
       </div>
+      <!-- Форма підписки  -->
+      <form class="footer-subscribe-form" action="#" method="post" novalidate>
+        <label for="subscribeEmail" class="footer-subscribe-label">Subscribe</label>
+        <input type="email" id="subscribeEmail" name="subscribeEmail" placeholder="Enter your email" required
+          class="footer-subscribe-input" />
+        <button type="submit" class="footer-subscribe-btn">Subscribe</button>
+      </form>
     </div>
   </footer>
 
