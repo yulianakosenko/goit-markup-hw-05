@@ -654,122 +654,76 @@ svg {
   --hover-color: #31d0aa;
 }
 
-/* D1: Оформлення елементів форми підписки у футері */
-.footer-subscribe-form {
-  display: flex;
-  gap: 12px;
-  align-items: center;
-  max-width: 400px;
+.footer_form-container {
+  max-width: 1158px;
   margin: 0 auto;
+  padding: 40px 15px;
 }
 
-.footer-subscribe-input {
-  flex-grow: 1;
-  padding: 12px 16px;
+.footer_subscribe-text {
+  margin-bottom: 16px;
+  font-weight: 500;
   font-size: 16px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1), box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+  color: #ffffff;
 }
 
-.footer-subscribe-button {
-  padding: 12px 24px;
-  background-color: var(--primary-color);
+.footer_subscribe-form {
+  display: flex;
+  gap: 24px;
+}
+
+.footer_subscribe-label {
+  display: block;
+}
+
+.footer_input-email {
+  width: 264px;
+  height: 40px;
+  border: 1px solid #ffffff;
+  background-color: transparent;
+  font-size: 12px;
+  line-height: 2;
+  letter-spacing: 0.04em;
+  padding-left: 16px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  color: #ffffff;
+  font-family: "Roboto", sans-serif;
+}
+
+.footer_input-email::placeholder {
+  color: #ffffff;
+  opacity: 1;
+}
+
+.footer_btn-submit {
+  min-width: 165px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+  color: #ffffff;
+  cursor: pointer;
+  background-color: #4d5ae5;
   border: none;
   border-radius: 4px;
-  color: #fff;
-  font-weight: 500;
-  cursor: pointer;
+  padding: 0 16px;
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.footer-subscribe-button:hover,
-.footer-subscribe-button:focus {
-  background-color: var(--hover-color);
-}
-* D2: Оформлення елементів форми заявки у модальному вікні */
-.modal-form {
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
-  padding: 24px;
-  background-color: #fff;
-  border-radius: 8px;
-  max-width: 400px;
+.footer_btn-submit:hover,
+.footer_btn-submit:focus {
+  background-color: #404bbf;
 }
 
-.modal-form input[type="text"],
-.modal-form input[type="email"],
-.modal-form textarea {
-  padding: 12px 16px;
-  font-size: 16px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1), box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-/* D3: Зміна рамки іконки при фокусі на input */
-.modal-form input[type="text"]:focus,
-.modal-form input[type="email"]:focus,
-.modal-form textarea:focus {
-  border-color: var(--primary-color);
-  box-shadow: 0 0 4px var(--primary-color);
-  outline: none;
-}
-
-.modal-form input[type="text"]:focus + .input-icon,
-.modal-form input[type="email"]:focus + .input-icon,
-.modal-form textarea:focus + .input-icon {
-  fill: var(--primary-color);
-  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-/* D4: Приховування оригінального чекбокса */
-.modal-form input[type="checkbox"] {
-  position: absolute;
-  opacity: 0;
-  width: 0;
-  height: 0;
-  pointer-events: none;
-}
-
-/* D5: Оформлення кастомного чекбокса з SVG галочкою */
-.checkbox-custom {
-  display: inline-flex;
-  align-items: center;
-  cursor: pointer;
-  user-select: none;
-  position: relative;
-  padding-left: 32px;
-  font-size: 16px;
-  color: #434455;
-}
-
-.checkbox-custom svg {
-  position: absolute;
-  left: 0;
-  top: 50%;
-  transform: translateY(-50%);
-  width: 20px;
-  height: 20px;
-  border: 1.5px solid #ccc;
-  border-radius: 4px;
-  fill: transparent;
-  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1), fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-/* Показати галочку при checked */
-.modal-form input[type="checkbox"]:checked + .checkbox-custom svg {
-  border-color: var(--primary-color);
-  fill: var(--primary-color);
-}
-
-/* D6: Усі переходи для hover/focus ефектів */
-.modal-form input[type="text"],
-.modal-form input[type="email"],
-.modal-form textarea,
-.checkbox-custom svg,
-.footer-subscribe-button,
-.footer-subscribe-input {
-  transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1);
+.footer_icon-arrow {
+  margin-left: 16px;
+  fill: currentColor;
 }

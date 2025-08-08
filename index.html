@@ -459,6 +459,7 @@
 
   <footer class="footer">
     <div class="footer-container container">
+
       <!-- Логотип та параграф -->
       <div class="footer-content">
         <a href="./index.html" class="footer-logo">
@@ -504,13 +505,20 @@
           </li>
         </ul>
       </div>
-      <!-- Форма підписки  -->
-      <form class="footer-subscribe-form" action="#" method="post" novalidate>
-        <label for="subscribeEmail" class="footer-subscribe-label">Subscribe</label>
-        <input type="email" id="subscribeEmail" name="subscribeEmail" placeholder="Enter your email" required
-          class="footer-subscribe-input" />
-        <button type="submit" class="footer-subscribe-btn">Subscribe</button>
-      </form>
+      <div class="footer_form-container">
+        <p class="footer_subscribe-text">Subscribe</p>
+        <form class="footer_subscribe-form" action="#" method="post" novalidate>
+          <label class="footer_subscribe-label">
+            <input class="footer_input-email" type="email" name="user-email" placeholder="E-mail" required />
+          </label>
+          <button type="submit" class="footer_btn-submit">
+            Subscribe
+            <svg class="footer_icon-arrow" width="24" height="24" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+              <use href="./images/sprite.svg#arrow-right"></use>
+            </svg>
+          </button>
+        </form>
+      </div>
     </div>
   </footer>
 
