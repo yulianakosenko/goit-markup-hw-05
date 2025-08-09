@@ -938,19 +938,20 @@ svg {
 
 /* Кастомний чекбокс */
 .privacy-checkbox-custom {
+  display: inline-flex;
   width: 16px;
   height: 16px;
   border: 1px solid rgba(46, 47, 66, 0.4);
   border-radius: 2px;
   margin-right: 8px;
-  display: inline-flex;
   align-items: center;
   justify-content: center;
-  color: transparent;
+  fill: transparent;
   transition:
     background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
     border 250ms cubic-bezier(0.4, 0, 0.2, 1),
     fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+ 
 }
 
 /* Іконка чекбокса */
@@ -961,18 +962,29 @@ svg {
   pointer-events: none; 
 }
 
+/* Коли input checked — змінюємо фон і fill span через css-змінні */
+:root {
+  --checkbox-checked-bg: #404bbf;
+  /* фон при checked */
+  --checkbox-checked-fill: #F4F4FD;
+  /* колір іконки при checked */
+}
+
 /* При наведенні або фокусі на інпут — синя рамка */
 .visually-hidden:focus+.privacy-label .privacy-checkbox-custom,
 .privacy-label:hover .privacy-checkbox-custom {
   border-color: #4D5AE5;
 }
 
-/* Стан чекнутого чекбокса */
+/* Застосування кольору фону при checked */
 .visually-hidden:checked+.privacy-label .privacy-checkbox-custom {
-  background-color: #4D5AE5;
+  background-color: var(--checkbox-checked-bg);
   border: none;
-  color: #f4f4fd
+  fill: var(--checkbox-checked-fill);
+  /* Змінюємо заливку іконки */
+  color: var(--checkbox-checked-fill);
 }
+
 
 .visually-hidden:checked+.privacy-label .checkbox-icon {
   fill: #F4F4FD;
