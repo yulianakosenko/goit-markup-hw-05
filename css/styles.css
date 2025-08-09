@@ -946,6 +946,10 @@ svg {
   margin-right: 8px;
   align-items: center;
   justify-content: center;
+  fill: transparent;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+      border 250ms cubic-bezier(0.4, 0, 0.2, 1),
+      fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
   
 }
 
@@ -956,11 +960,7 @@ svg {
   height: 8px;
   fill: transparent;
   pointer-events: none; 
-  fill: transparent;
-    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-      border 250ms cubic-bezier(0.4, 0, 0.2, 1),
-      fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
-      
+
 }
 
 /* Коли input checked — змінюємо фон і fill span через css-змінні */
