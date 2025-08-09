@@ -939,6 +939,7 @@ svg {
 /* Кастомний чекбокс */
 .privacy-checkbox-custom {
   display: inline-flex !important;
+  position: relative;
   width: 16px;
   height: 16px;
   border: 1px solid rgba(46, 47, 66, 0.4);
