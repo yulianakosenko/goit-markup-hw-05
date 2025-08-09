@@ -929,7 +929,6 @@ svg {
   letter-spacing: 0.04em;
   color: #8e8f99;
   cursor: pointer;
-  display: flex;
   align-items: center;
   user-select: none;
   gap: 8px;
